@@ -1,0 +1,49 @@
+#_______________________________
+# Python virtual environment 
+#_______________________________
+
+.venv/                # Ignore the default virtual environment folder if you used ".venv"
+venv/                 # Ignore another common virtual environment folder
+env/                  # Ignore another possible virtual environment folder
+
+
+#______________________
+# python cache files
+#________________________
+__pycache__/   # Ignore python compiled cache folders
+*.py[cod]      # Ignore compiled python: .pyc, .pyo, .pyd
+*.pyo          # Ignore python optimization files
+
+
+#________________________________
+# Big datasets or generated files we don't want to upload
+#_______________________________
+
+data/raw/           # ignore raw data folder (original dataset)
+data/processed/     # Ignore processed/cleaned data folder (can be recreate locally)
+artifacts/          # ignore ML artifacts (intermediate file, logs, model from training)
+mlruns/             # Ignore MLflow tracking folder
+
+
+#_______________________________________
+# Exceptions - keep our trained model in repository
+#_______________________________________
+# Normally artifacts/ is ignored, but we explicitly allow the final model folder:
+# If artifacts/ is ignored, we explicitly allow files in this folder
+
+!src/serving/model/       # Track the folder containing the final model
+!src/serving/model/       # Track all files inside the model folder (the saved  .pklk, etc.)
+
+#________________________________
+# System / Jupyter files
+#________________________________
+
+.ipynb_checkpoints/       # Ignorejupyter checkpoint files
+.DS_Store                 # I Ignore macOS system file
+
+#_______________________________
+# Whys use extenseions like .plk or .joblib?
+#_______________________________
+# artifacts/*.pkl           # .pkl is python pickle format
+# artifacts/*.joblib        # .joblib is similar, faster for large numpy arrays
+# these patterns will ignore all pickled models in artefacts, but we are explicitly keeping the final model in src/serving/model/ instead

@@ -1,0 +1,24 @@
+artifact_path: /home/diffo/Documents/Data_Science_Business_Informatics/Courses/Tutorial
+  Folder/fast_project/Game_predic_folder/mlruns/0/models/m-d248564fe9fe4facbd60764bfd146852/artifacts
+flavors:
+  python_function:
+    env:
+      conda: conda.yaml
+      virtualenv: python_env.yaml
+    loader_module: mlflow.sklearn
+    model_path: model.pkl
+    predict_fn: predict
+    python_version: 3.12.2
+  sklearn:
+    code: null
+    pickled_model: model.pkl
+    serialization_format: cloudpickle
+    sklearn_version: 1.8.0
+    skops_trusted_types: null
+mlflow_version: 3.9.0
+model_id: m-d248564fe9fe4facbd60764bfd146852
+model_size_bytes: 643
+model_uuid: m-d248564fe9fe4facbd60764bfd146852
+prompts: null
+run_id: d1fd4ad909c645bdad76458376e4e404
+utc_time_created: '2026-02-11 16:50:03.311086'
