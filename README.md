@@ -7,7 +7,7 @@
 
 **Goal:** Predict board game ratings (Low/Medium/High → 0,1,2) using a regression model.
 
-**Dataset:** BoardGameGeek dataset with 21,925 games and 46 features.
+**Dataset:** BoardGameGeek dataset with 21,925 games and 46 features. 
 
 **Target Variable:** `Rating` (categorical → numeric mapping: Low=0, Medium=1, High=2)
 
